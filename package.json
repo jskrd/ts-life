@@ -1,6 +1,6 @@
 {
 	"name": "ts-life",
-	"module": "index.ts",
+	"module": "src/index.ts",
 	"type": "module",
 	"scripts": {
 		"format": "biome format . --write",
