@@ -1,11 +1,16 @@
 {
-  "name": "ts-life",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "ts-life",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"format": "biome format . --write",
+		"lint": "biome lint ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
 }
