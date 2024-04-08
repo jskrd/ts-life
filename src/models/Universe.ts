@@ -34,4 +34,28 @@ export class Universe {
 
 		this.generation = newGeneration;
 	}
+
+	public toCanvas(width: number, height: number): HTMLCanvasElement {
+		const canvas = document.createElement("canvas");
+		canvas.width = width;
+		canvas.height = height;
+
+		const context = canvas.getContext("2d");
+		if (!(context instanceof CanvasRenderingContext2D)) {
+			throw new Error("Canvas context not found");
+		}
+
+		for (const [key] of this.generation.getLiveCells()) {
+			const [x, y] = Generation.decodeCoords(key);
+
+			if (x < 0 || x >= width || y < 0 || y >= height) {
+				continue;
+			}
+
+			context.fillStyle = "white";
+			context.fillRect(x, y, 1, 1);
+		}
+
+		return canvas;
+	}
 }

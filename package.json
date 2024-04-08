@@ -3,6 +3,9 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"scripts": {
+		"bundle": "bun build ./src/index.ts --outfile=public/app.js",
+		"dev": "bun run bundle --watch",
+		"prod": "bun run bundle --minify",
 		"format": "biome format . --write",
 		"lint": "biome lint ."
 	},
