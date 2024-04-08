@@ -1,8 +1,8 @@
-import { inject } from "@vercel/analytics";
+import { inject as injectAnalytics } from "@vercel/analytics";
 import { injectSpeedInsights } from "@vercel/speed-insights";
 import { play } from "./game";
 
-inject();
+injectAnalytics();
 injectSpeedInsights();
 
 play();
