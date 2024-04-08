@@ -1,7 +1,14 @@
 {
 	"name": "ts-life",
 	"module": "src/index.ts",
-	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "1.6.4",
+		"@types/bun": "latest",
+		"@vercel/analytics": "^1.2.2"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
 	"scripts": {
 		"bundle": "bun build ./src/index.ts --outfile=public/app.js",
 		"dev": "bun run bundle --watch",
@@ -9,11 +16,5 @@
 		"format": "biome format . --write",
 		"lint": "biome lint ."
 	},
-	"devDependencies": {
-		"@biomejs/biome": "1.6.4",
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+	"type": "module"
 }
