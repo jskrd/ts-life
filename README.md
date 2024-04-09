@@ -11,3 +11,36 @@ Built with:
 - [**TypeScript**](https://www.typescriptlang.org/) for type safety and modern JavaScript features
 - [**Bun**](https://bun.sh/) for dependency management, building, and testing
 - [**Biome**](https://biomejs.dev/) for code formatting and linting
+
+## Usage
+
+### Installation
+
+```sh
+bun install
+```
+
+### Building for Development
+
+```sh
+bun run dev
+```
+
+### Building for Production
+
+```sh
+bun run prod
+```
+
+### Running Tests
+
+```sh
+bun test
+```
+
+### Formatting and Linting
+
+```sh
+bun run format
+bun run lint
+```
